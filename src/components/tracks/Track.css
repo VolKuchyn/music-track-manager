@@ -103,12 +103,12 @@
 }
 
 .btn-warning {
-    background-color: #ffc107;
-    color: #212529;
+    background-color: #007bff;
+    color: white;
 }
 
 .btn-warning:hover {
-    background-color: #e0a800;
+    background-color: #0056b3;
 }
 
 .spinner {

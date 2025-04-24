@@ -103,3 +103,8 @@
     cursor: not-allowed;
     transform: none;
 }
+
+.no-tracks {
+    width: 100%;
+    text-align: center;
+}

@@ -14,6 +14,7 @@ import FilterDesc from '../../assets/sort-descending-svgrepo-com.svg'
 import LeftArrow from '../../assets/left-arrow.svg'
 import RightArrow from '../../assets/right-arrow.svg'
 import SkeletonTrack from './skeletonTrack/SkeletonTrack';
+import NoTracksImage from '../../assets/no-tracks-found.png';
 import './Tracks.css'
 
 
@@ -162,6 +163,12 @@ const Tracks = () => {
       {tracksState.tracks.map((t) => (
         <Track key={t.id} {...t} />
       ))}
+
+      {!tracksState.isTracksLoading && tracksState.tracks.length === 0 && (
+        <div className="no-tracks">
+          <img src={NoTracksImage} alt="no-image" />
+        </div>
+      )}
 
       {isPlayer && <div style={{ height: '65px' }}></div>}
     </>
