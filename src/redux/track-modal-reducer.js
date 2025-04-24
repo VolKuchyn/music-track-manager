@@ -18,15 +18,14 @@ export const fetchTrackBySlug = createAsyncThunk('trackModal/fetchTrackBySlug', 
   } catch (err) {
     return rejectWithValue('❌ Track not found!');
   }
-}
-);
+});
 
 const trackModalReducer = createSlice({
   name: 'trackModal',
   initialState,
   reducers: {
     openTrackModal(state, action) {
-      state.track = action.payload;
+      state.track = action.payload.track;
       state.isOpen = true;
       state.isClosing = false;
     },

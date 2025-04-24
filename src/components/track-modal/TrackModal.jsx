@@ -26,11 +26,11 @@ const TrackModal = () => {
 
     useEffect(() => {
         if (isOpen && track?.slug) {
-            navigate(`/${track.slug}`, { replace: false });
+            navigate(`/tracks/${track.slug}`, { replace: false });
         }
 
-        if (!isOpen && location.pathname !== '/') {
-            navigate('/', { replace: false });
+        if (!isOpen && location.pathname.startsWith('/tracks/') && location.pathname !== '/tracks') {
+            navigate('/tracks', { replace: false });
         }
     }, [isOpen, track?.slug]);
 

@@ -10,7 +10,7 @@ const Track = (track) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="track-wrapper" onClick={() => dispatch(openTrackModal(track))} data-testid={`track-item-${track.id}`}>
+    <div className="track-wrapper" onClick={() => dispatch(openTrackModal({ track }))} data-testid={`track-item-${track.id}`}>
       <div
         className="track-cover-wrapper"
         onClick={(e) => {
